@@ -3,7 +3,7 @@
 
 A sleek, responsive analytics dashboard built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Shadcn UI components**. Designed for modern marketing insights and campaign performance tracking.
 
-## ✅ Features Implemented
+## Features Implemented
 
 ### Dashboard Page (`/dashboard`)
 - Displays overview metrics and charts.
@@ -11,7 +11,7 @@ A sleek, responsive analytics dashboard built with **Next.js 15 (App Router)**, 
 
 ### Components
 
-#### 📊 Charts and Cards
+####  Charts and Cards
 - `BarChartCard.tsx`
 - `LineChartCard.tsx`
 - `DonutChartCard.tsx`
@@ -20,11 +20,11 @@ A sleek, responsive analytics dashboard built with **Next.js 15 (App Router)**, 
 
 These components provide various visualizations for impressions, clicks, conversions, and revenue.
 
-#### 📈 Data Tables
+####  Data Tables
 - `CampaignTable.tsx`: Sortable campaign performance table.
 - `DataTable.tsx`: Generic data table, reusable for other data sets.
 
-#### 🧩 UI & Utilities
+####  UI & Utilities
 - `MetricCard.tsx`: Displays single-value KPIs in a card format.
 - `ThemeToggle.tsx`: Toggle between light/dark themes using Shadcn’s built-in theming.
 
@@ -32,7 +32,7 @@ These components provide various visualizations for impressions, clicks, convers
 - `mockData.ts`: Contains sample campaign and metrics data.
 - `utils.ts`: (placeholder for helper functions or formatting logic)
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Next.js 15 (App Router)**
 - **React 18**
@@ -41,35 +41,33 @@ These components provide various visualizations for impressions, clicks, convers
 - **Shadcn UI**
 - **Recharts** (for data visualizations)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-
 src/
 ├── app/
-│   └── dashboard/        # Route: /dashboard
-│       └── page.tsx
-│   ├── layout.tsx        # App layout
-│   ├── page.tsx          # Root route (optional)
-│   └── globals.css       # Tailwind styles
-├── components/
-│   ├── ui/               # Shadcn-based and custom UI components
-│   │   ├── BarChartCard.tsx
-│   │   ├── CampaignTable.tsx
-│   │   ├── ChartCard.tsx
-│   │   ├── DashboardChart.tsx
-│   │   ├── DataTable.tsx
-│   │   ├── DonutChartCard.tsx
-│   │   ├── LineChartCard.tsx
-│   │   ├── MetricCard.tsx
-│   │   └── ThemeToggle.tsx
+│   ├── dashboard/           # Route: /dashboard
+│   │   └── page.tsx
+│   ├── layout.tsx           # App layout
+│   ├── page.tsx             # Root route (optional)
+│   └── globals.css          # Tailwind styles
+├── components/              # All custom + Shadcn UI components
+│   ├── BarChartCard.tsx
+│   ├── CampaignTable.tsx
+│   ├── ChartCard.tsx
+│   ├── DashboardChart.tsx
+│   ├── DataTable.tsx
+│   ├── DonutChartCard.tsx
+│   ├── LineChartCard.tsx
+│   ├── MetricCard.tsx
+│   └── ThemeToggle.tsx
 ├── lib/
-│   ├── mockData.ts       # Sample JSON data
-│   └── utils.ts          # Utility functions (optional)
+│   ├── mockData.ts          # Sample JSON data
+│   └── utils.ts             # Utility functions (optional)
 
 ````
 
-## 🚀 Getting Started
+##  Getting Started
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/admybrand-dashboard.git
@@ -80,7 +78,7 @@ npm run dev
 
 Open `http://localhost:3000/dashboard` in your browser.
 
-## 📌 Next Steps
+## Next Steps
 
 * Integrate API backend (or CMS) for dynamic data.
 * Add auth and admin routes.
