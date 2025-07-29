@@ -1,57 +1,52 @@
 
 # ADmyBRAND Dashboard
 
-A sleek, responsive analytics dashboard built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Shadcn UI components**. Designed for modern marketing insights and campaign performance tracking.
+A modern, responsive analytics dashboard built using **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Shadcn UI**. This dashboard simulates marketing campaign analytics with beautiful charts, dynamic data tables, and a clean UI optimized for both desktop and mobile.
 
-## Features Implemented
+## ✅ Features Implemented
 
-### Dashboard Page (`/dashboard`)
-- Displays overview metrics and charts.
-- Clean layout with responsive grid and dark mode support.
+### 📊 Dashboard (`/dashboard`)
 
-### Components
+* Responsive layout with sidebar navigation and topbar
+* Overview cards showing KPIs like revenue, conversions, etc.
+* Integrated charts: line, bar, donut
+* Sortable and filterable campaign performance table
+* Theme toggle: Dark/Light mode using `next-themes`
 
-####  Charts and Cards
-- `BarChartCard.tsx`
-- `LineChartCard.tsx`
-- `DonutChartCard.tsx`
-- `ChartCard.tsx`
-- `DashboardChart.tsx`
+### 🧱 Reusable Components
 
-These components provide various visualizations for impressions, clicks, conversions, and revenue.
+* `MetricCard.tsx`: KPI display card
+* `LineChartCard.tsx`, `BarChartCard.tsx`, `DonutChartCard.tsx`: Chart wrappers using **Recharts**
+* `DashboardChart.tsx`: Combined or additional chart
+* `CampaignTable.tsx`: Sortable table with dummy campaign data
+* `ThemeToggle.tsx`: Dark/light switch
+* `DashboardLayout.tsx`: Layout wrapper with sidebar and topbar
+* `DataTable.tsx`: (Optional) reusable generic table logic
 
-####  Data Tables
-- `CampaignTable.tsx`: Sortable campaign performance table.
-- `DataTable.tsx`: Generic data table, reusable for other data sets.
+### 🔧 Utilities
 
-####  UI & Utilities
-- `MetricCard.tsx`: Displays single-value KPIs in a card format.
-- `ThemeToggle.tsx`: Toggle between light/dark themes using Shadcn’s built-in theming.
+* `mockData.ts`: Static data for dashboard metrics and charts
+* `utils.ts`: Placeholder for future helper functions
 
-### Static Data
-- `mockData.ts`: Contains sample campaign and metrics data.
-- `utils.ts`: (placeholder for helper functions or formatting logic)
+## 🧰 Tech Stack
 
-## Tech Stack
+* **Next.js 15 (App Router)**
+* **TypeScript + React 18**
+* **Tailwind CSS**
+* **Shadcn UI**
+* **Recharts**
 
-- **Next.js 15 (App Router)**
-- **React 18**
-- **TypeScript**
-- **Tailwind CSS**
-- **Shadcn UI**
-- **Recharts** (for data visualizations)
-
-## Project Structure
+## 🗂️ Folder Structure
 
 ```
 src/
 ├── app/
-│   ├── dashboard/           # Route: /dashboard
+│   ├── dashboard/           # Dashboard route
 │   │   └── page.tsx
-│   ├── layout.tsx           # App layout
-│   ├── page.tsx             # Root route (optional)
-│   └── globals.css          # Tailwind styles
-├── components/              # All custom + Shadcn UI components
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Home (optional)
+│   └── globals.css          # Tailwind & custom styles
+├── components/              # All UI components
 │   ├── BarChartCard.tsx
 │   ├── CampaignTable.tsx
 │   ├── ChartCard.tsx
@@ -60,30 +55,21 @@ src/
 │   ├── DonutChartCard.tsx
 │   ├── LineChartCard.tsx
 │   ├── MetricCard.tsx
-│   └── ThemeToggle.tsx
+│   ├── ThemeToggle.tsx
+│   └── DashboardLayout.tsx
 ├── lib/
-│   ├── mockData.ts          # Sample JSON data
-│   └── utils.ts             # Utility functions (optional)
+│   ├── mockData.ts
+│   └── utils.ts
+```
 
-````
-
-##  Getting Started
+## 🚀 Getting Started
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/admybrand-dashboard.git
 cd admybrand-dashboard
 npm install
 npm run dev
-````
+```
 
-Open `http://localhost:3000/dashboard` in your browser.
-
-## Next Steps
-
-* Integrate API backend (or CMS) for dynamic data.
-* Add auth and admin routes.
-* Optimize mobile UI with responsive cards and charts.
-* Add filters/date range selectors for better campaign control.
-
-
+Then visit [http://localhost:3000/dashboard](http://localhost:3000/dashboard) in your browser.
 
