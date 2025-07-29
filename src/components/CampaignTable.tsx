@@ -45,16 +45,14 @@ const campaigns = [
 export default function CampaignTable() {
   const [sortBy, setSortBy] = useState<keyof typeof campaigns[0]>("revenue");
   const [direction, setDirection] = useState<"asc" | "desc">("desc");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [filter, setFilter] = useState("");
 
-  const filteredCampaigns = campaigns.filter((c) =>
-    c.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const sortedCampaigns = [...filteredCampaigns].sort((a, b) => {
-    const result = a[sortBy] > b[sortBy] ? 1 : -1;
-    return direction === "asc" ? result : -result;
-  });
+  const sortedCampaigns = [...campaigns]
+    .filter((c) => c.name.toLowerCase().includes(filter.toLowerCase()))
+    .sort((a, b) => {
+      const result = a[sortBy] > b[sortBy] ? 1 : -1;
+      return direction === "asc" ? result : -result;
+    });
 
   const toggleSort = (key: keyof typeof campaigns[0]) => {
     if (sortBy === key) {
@@ -66,17 +64,16 @@ export default function CampaignTable() {
   };
 
   return (
-    <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl shadow">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Campaign Performance</h2>
-        <Input
-          type="text"
-          placeholder="Search by name..."
-          className="w-60"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+    <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl shadow space-y-4">
+      <h2 className="text-lg font-semibold">Campaign Performance</h2>
+
+      <Input
+        placeholder="Search campaigns..."
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        className="max-w-sm"
+      />
+
       <Table>
         <TableHeader>
           <TableRow>
